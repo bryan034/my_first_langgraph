@@ -87,12 +87,13 @@ builder.add_edge("reject", END)
 builder.add_edge("error", END)
 
 graph = builder.compile()
-r = graph.invoke({
-    "job_description": "AI Engineer Intern requiring Python, FastAPI, REST APIs, SQL, LLM integration, and Docker.",
-    "resume": "Business student with experience in event planning, social media marketing, customer service, and retail sales. Proficient in Microsoft PowerPoint and Canva. No programming, software development, or AI engineering experience.",
-    "fit_score": 0,
-    "reasoning": "",
-    "status": "pending",
-})
-print(r)
+if __name__ == "__main__":
+    r = graph.invoke({
+        "job_description": "AI Engineer Intern requiring Python, FastAPI, REST APIs, SQL, LLM integration, and Docker.",
+        "resume": "Business student with experience in event planning, social media marketing, customer service, and retail sales. Proficient in Microsoft PowerPoint and Canva. No programming, software development, or AI engineering experience.",
+        "fit_score": 0,
+        "reasoning": "",
+        "status": "pending",
+    })
+    print(r)
 
